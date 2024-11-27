@@ -1,0 +1,156 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+
+
+/* buttons */
+
+header .buttons img {
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+header .buttons img:hover {
+    transform: scale(1.1);
+}
+
+/* Grid view */
+
+body.grid header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+body.grid header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+body.grid main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+}
+
+
+body.grid main section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+body.grid main section:hover {
+    transform: translateY(-5px);
+}
+
+body.grid main section h2 {
+    font-size: 1.2rem;
+    color: #000;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+body.grid main section img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+body.grid main section div {
+    margin: 0.5rem 0;
+}
+
+body.grid main section div span {
+    font-weight: bold;
+    color: #555;
+}
+
+
+
+
+/* List view */
+
+body.list header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+body.list header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+
+body.list main section {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.list main section img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+body.list main section h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: black;
+}
+
+body.list main section div {
+    margin: 0.25rem 0;
+    color: black;
+}
+
+body.list main section div span {
+    font-weight: bold;
+    color: black;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+
+
+
+/* button switcher */
+body.grid section #grid{display: none;}
+body.grid section #list{display: block;}
+
+body.list section #grid{display: block;}
+body.list section #list{display: none;}
